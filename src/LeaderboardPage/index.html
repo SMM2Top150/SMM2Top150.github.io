@@ -1,0 +1,80 @@
+<html lang="en"><head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../format.css">
+    <link rel="stylesheet" href="./format.css">
+    <script src="../../src/levelDatabase.js"></script>
+    <script type="text/javascript" src="../SheetsData.js"></script>
+    <title>List Page</title>
+  </head>
+  <body>
+    <div id="NavBar" style="position: sticky; z-index: 999; opacity: .95; position: fixed;">
+      <!-- Home Page Tab -->
+      <div id="navTabHome" onclick="window.location.href='../../src/HomePage/index.html'">
+	Homepage
+      </div>
+      <!-- List Page Tab -->
+      <div id="navTabList" onclick="window.location.href='../../src/ListPage/index.html'">
+	Listpage
+      </div>
+      <!-- Leaderboard Page Tab -->
+      <div id="navTabOnLeaderboard">
+	Leaderboard
+      </div>
+      <!-- profile -->
+      <div id="navTabProfile">
+      </div>
+    </div>
+
+    <div id="fart" style="margin-top: 185px">
+      Loading...
+    </div>
+    
+
+    <script>
+      LevelSlot = ""
+      for (let index = 0; index < LeaderboardArray.length; index += 2) {
+	  LevelSlot += "<div id='LevelPosition'><div id='rankNumber'>"+ (index +2)/2 +"</div> <div id='name'>"+LeaderboardArray[index]+"</div><div id='points'>"+LeaderboardArray[index + 1]+"p</div><div id='PFP'></div></div>"
+      }
+      document.getElementById("fart").innerHTML = LevelSlot
+      //------------------------------------------------------------------------------
+
+
+      function PointCalc(PlaceMent) {
+	  return Math.pow(1.054411903089, ((PlaceMent+40)/1.4))
+      }
+
+      function ClearPoints(Array) {
+	  index = 0
+	  total = 0
+	  while (index < Array.length) {
+	      total += PointCalc(101 - Array[index] + Daphnes_Finale - 1)
+	      index += 1
+	  }
+	  return total
+      }
+
+      function ProgressCalc(Placement, Progress) {
+	  PointPrecent = ((Progress/10.0)*(Progress/10.0) * 0.01)
+	  return (PointCalc(Placement + Daphnes_Finale - 1)*PointPrecent)*0.90
+      }
+
+      function ProgressPoint(ProgressArray, LevelArray) {
+	  index = 0
+	  total = 0
+	  while (index < ProgressArray.length) {
+	      total += ProgressCalc(101 - LevelArray[index], ProgressArray[index])
+	      index += 1
+	  }
+	  return total
+      }
+
+      function MasterPoints(ProgressArray, ProgressLevelArray, ClearArray) {
+	  return ProgressPoint(ProgressArray, ProgressLevelArray) +  ClearPoints(ClearArray)
+      }
+    </script>
+
+  </body>
+</html>

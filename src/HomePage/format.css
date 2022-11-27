@@ -1,0 +1,231 @@
+#discord{
+    /* BG */
+
+
+    position: absolute;
+    width: 793px;
+    height: 251px;
+    left: 108px;
+    top: 184px;
+
+    background: #36393F;
+    box-shadow: -23px 23px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+#googleforms {
+
+    position: absolute;
+    width: 186px;
+    height: 186px;
+    left: 1038px;
+    top: 215px;
+    background-size: cover;
+    border-radius: 67%;
+    background-image:url("https://p.kindpng.com/picc/s/225-2259351_report-icon-circle-flat-google-forms-logo-png.png")
+}
+#submissions{
+    /* BG */
+
+
+    position: absolute;
+    width: 793px;
+    height: 589px;
+    left: 1024px;
+    top: 184px;
+
+    background: #5B4F62;
+    box-shadow: -23px 23px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+#top3{
+    /* BG */
+
+
+    position: absolute;
+    width: 793px;
+    height: 679px;
+    left: 108px;
+    top: 502px;
+
+    background: #FFFFFF;
+    box-shadow: -23px 23px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+#top3Text{
+    /* Top 3 hardest levels */
+
+
+    position: absolute;
+    width: 624px;
+    height: 105px;
+    left: 192px;
+    top: 531px;
+
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 73px;
+    text-align: center;
+
+    color: #5D1B1C;
+    background: none;
+}
+
+#joinLink{
+    /* Join link */
+
+
+    position: absolute;
+    width: 530px;
+    height: 64px;
+    left: 344px;
+    top: 287px;
+
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 55px;
+    text-decoration-line: underline;
+
+    color: #0374B5;
+    background: none;
+}
+
+#links{
+    /* Links */
+
+
+    position: absolute;
+    width: 530px;
+    height: 64px;
+    left: 1260px;
+    top: 205px;
+
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 55px;
+    text-decoration-line: underline;
+
+    color: #E9D7EB;
+    
+    background: none;
+}
+
+#discordPNG{
+    /* Discord Logo */
+
+
+    position: absolute;
+    width: 183px;
+    height: 184px;
+    left: 139px;
+    top: 211px;
+
+    background-size:cover;
+    border-radius:50%;
+    
+    background-image:url("https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png")
+}
+
+#topTen {
+    /* BG */
+
+    position: absolute;
+    width: 793px;
+    height: 1017px;
+    left: 1013px;
+    top: 1084px;
+
+    background: #BD99C2;
+    box-shadow: -23px 23px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+#underReview {
+    /* BG */
+
+
+    position: absolute;
+    width: 793px;
+    height: 548px;
+    left: 108px;
+    top: 1248px;
+
+    background: #FFFFFF;
+    box-shadow: -23px 23px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 143px;
+    text-align: center;
+
+    color: #5D1B1C;
+}
+
+#LevelPosition {
+    /* Rank Slot BG */
+
+
+    position: relative;
+    width: 665px;
+    height: 70px;
+    left: 1068px;
+
+    margin-top: 17px;
+
+    background: #FFFFFF;
+    box-shadow: -10px 10px 0px rgb(0 0 0 / 25%);
+    border-radius: 20px;
+}
+
+#rankNumber {
+    position: relative;
+
+    width: 53px;
+    height: 53px;
+    left: 2%;
+    top: 15%;
+    background: #BD99C2;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 52px;
+
+    color: #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#name {
+
+    position: relative;
+    height: 38px;
+    left: 73px;
+    top: -37px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    color: #000000;
+    background: none;
+}
+
+#points {
+    position: relative;
+    height: 91px;
+    left: 511px;
+    top: -100px;
+
+    padding-bottom: 200px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 86px;
+
+    color: #8E8E8E;
+    background: none;
+
+}
+
+
+

@@ -1,0 +1,68 @@
+#LevelPosition {
+    /* Rank Slot BG */
+
+
+    position: relative;
+    width: 1776px;
+    height: 152px;
+    left: 68px;
+    top: 19%;
+    margin-top: 40px;
+
+    background: #FFFFFF;
+    box-shadow: -23px 23px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+#rankNumber {
+    position: relative;
+
+    width: 95px;
+    height: 95px;
+    left: 2%;
+    top: 15%;
+    background: #BD99C2;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 92px;
+
+    color: #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#name {
+
+    position: relative;
+    width: 1391px;
+    height: 96px;
+    left: 10%;
+    top: -55%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    color: #000000;
+    background: none;
+}
+
+#points {
+    position: relative;
+    width: 1257px;
+    height: 96px;
+    left: 10%;
+    top: -77%;
+
+
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 85px;
+
+    color: #8E8E8E;
+    background: none;
+
+}
+
+
+

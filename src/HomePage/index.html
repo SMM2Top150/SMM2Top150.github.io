@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang ="en">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="../format.css">
+      <link rel="stylesheet" href="./format.css">
+      <script src="../../src/levelDatabase.js"></script>
+      <title>List Page</title>
+      <script type="text/javascript" src="../SheetsData.js"></script>
+  </head>
+  <body>
+    <div id="NavBar" style="position: sticky; z-index: 999; opacity: .95; position: fixed;">
+      <!-- Home Page Tab -->
+      <div id="navTabOnHome" onclick="window.location.href='../../src/HomePage/index.html'">
+	Homepage
+      </div>
+      <!-- List Page Tab -->
+      <div id="navTabList" onclick="window.location.href='../../src/ListPage/index.html'">
+	Listpage
+      </div>
+      <!-- Leaderboard Page Tab -->
+      <div id="navTabLeaderboard" onclick="window.location.href='../../src/LeaderboardPage/index.html'">
+	Leaderboard
+      </div>
+      <!-- profile -->
+      <div id="navTabProfile">
+      </div>
+    </div>
+    
+    <div id="discord">
+    </div>
+    <a id="joinLink" href="https://discord.gg/xVBDxkR9Dx">discord.gg/xVBDxkR9Dx
+    </a>    
+    <div id="discordPNG">
+    </div>
+
+    <div id="submissions">
+    </div>
+
+    <div id="googleforms">
+    </div>
+    <div id="links">
+      <p onclick="window.open('https:/docs.google.com/forms/d/e/1FAIpQLSfsBE94cu2Cnb9S6EU09mQx5BEWwx1tOMp8F2T5kapAY1QGHA/viewform?usp=sf_link')" style="background: none">Submit a level</p>
+      
+      <p onclick="window.open('https:/docs.google.com/forms/d/e/1FAIpQLSemdGqIFVCihLJeVT4ILtPg5kU29MJMR3dvLdqdTKzHNC2A2g/viewform?usp=sf_link')" style="background: none">Submit level completion progress</p>
+      
+      <p onclick="window.open('https:/docs.google.com/forms/d/e/1FAIpQLSf2T1Pw5TPZyG5plxh7Jfi1SIzq0NEHXWSP_YDhm9NZAotigA/viewform?usp=sf_link')" style="background: none">Request a level position change</p> 
+    </div>
+    
+    <div id="top3">
+    </div>
+    <div id="top3Text">
+      Top 3 hardest levels
+    </div>
+    
+    <div id="TopThreeJSON">
+    </div>
+    
+
+      <div id="topTen" style="margin-top:-240px">
+      </div>
+
+      <div id="topTenScript" style="margin-top:-140px">
+	
+      </div>
+      
+      <div id="underReview">
+	Levels under review
+      </div>
+      
+      <script>
+
+	function PointCalc(PlaceMent) {
+	    return Math.pow(1.054411903089, ((PlaceMent+40)/1.4))
+	}
+  
+  function ClearPoints(Array) {
+          var index = 0
+          var total = 0
+            while (index < Array.length) {
+              total += PointCalc(101 - Array[index] + Daphnes_Finale - 1)
+              index += 1
+            }
+          return total
+        }
+
+        var topThreeSlot = ""
+        for (let i = 1; i < 4; i++) {
+            YTID = videosArray[i-1].split('=')
+            topThreeSlot += "<div id='farts'><iframe src='https://www.youtube.com/embed/"+YTID[1]+"' id='miniimg'></iframe><div id='minititle'>"+EveryLevelArrayString[i-1]+"</div><div id='minipoints'>"+ClearPoints([i]).toFixed(2)+"</div></div>"
+        }
+        document.getElementById("TopThreeJSON").innerHTML = topThreeSlot
+
+        LevelSlot = ""
+        for (let index = 0; index < 20; index += 2) {
+            LevelSlot += "<div id='LevelPosition'><div id='rankNumber'>"+ (index +2)/2 +"</div> <div id='name'>"+LeaderboardArray[index]+"</div><div id='points'>"+LeaderboardArray[index + 1]+"p</div><div id='PFP'></div></div>"
+        }
+        document.getElementById("topTenScript").innerHTML = LevelSlot
+        </script>	
+	  
+	  <style>
+	#TopThreeJSON{
+	    margin-top: 650px;
+	}
+
+	#farts {
+	    margin-top: 50px;
+	     
+	}
+	#miniimg {
+	    
+	    position: relative ;
+	    width: 234px;
+	    height: 142px;
+	    left: 192px;
+	    top: 3%;
+
+	    border-radius: 20px;
+	    background: none;
+	}
+
+	#minititle { 
+	    position: relative;
+	    width: 351px;
+	    height: 41px;
+	    left: 440px;
+	    margin-top: -114px;
+
+	    font-weight: 700;
+	    font-size: 41px;
+	    background: none;
+
+	    color: #5D1B1C;
+	}
+
+	#minipoints {
+	    position: relative;
+	    width: 351px;
+	    height: 41px;
+	    left: 440px;
+	    
+
+	    font-weight: 400;
+	    font-size: 32px;
+	    line-height: 55px;
+	    background: none;
+
+	    color: #5D1B1C;
+	}
+      </style>
+  </body>
+</home>

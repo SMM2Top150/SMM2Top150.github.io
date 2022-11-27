@@ -1,0 +1,237 @@
+#WhiteDivBG {
+/* WhiteDivBG */
+position: absolute;
+width: 1786px;
+height: 3140px;
+left: 66px;
+top: 151px;
+background: #FFFFFF;
+box-shadow: -23px 23px 0px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+overflow-y: hidden;
+}
+#LevelTitle{
+  position: absolute;
+    width: 1426px;
+    height: 128px;
+    left: 278px;
+    top: 214px;
+    font-weight: 600;
+    font-size: 86px;
+    line-height: 128px;
+    text-align: center;
+    color: #5D1B1C;
+    background: none;
+}
+#descriptionBox {
+    width: 1629px;
+    height: 103px;
+    left: 139px;
+    top: 349px;
+    background: #FEF3D3;
+    position: relative;
+    text-align: left;
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 43px;
+    color: #5D1B1C;
+}
+#DataTab{
+  /* Level Info Bg */
+
+position: absolute;
+width: 379px;
+height: 329px;
+left: 148px;
+top: 529px;
+
+font-weight: 400;
+font-size: 32px;
+line-height: 43px;
+text-align: center;
+
+
+color: #5D1B1C;
+
+background: #FEF3D3;
+}
+
+#LevelInfoTab {
+  
+  position: absolute;
+  
+width: 379px;
+height: 227px;
+left: 148px;
+top: 902px;
+    background: #FEF3D3;
+    font-weight: 1px;
+    font-size: 27px;
+    line-height: 27px;
+    color: #5D1B1C;
+}
+#creatorPFPTab{
+  position: absolute;
+width: 73px;
+height: 73px;
+    left: 446px;
+    top: 1049px;
+    background: #C4C4C4;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+#statsTab{
+/* Level Info Bg */
+
+
+position: absolute;
+width: 724px;
+height: 209px;
+left: 148px;
+top: 1202px;
+
+background: #FEF3D3;
+
+font-weight: 400;
+font-size: 32px;
+line-height: 14px;
+text-align: center;
+color: #5D1B1C;
+}
+#CourseInfoTab{
+
+  background-color: #FEF3D3;
+  
+position: absolute;
+width: 724px;
+height: 209px;
+left: 987px;
+top: 1202px;
+
+font-weight: 400;
+font-size: 32px;
+line-height: 14px;
+text-align: center;
+
+color: #5D1B1C;
+}
+#embed {
+position: absolute;
+width: 1137px;
+height: 629px;
+left: 611px;
+top: 529px;
+
+filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
+}
+
+#PlayerClearsDiv {
+  
+position: absolute;
+width: 1501px;
+height: 194px;
+left: 209px;
+top: 1509px;
+
+background: #8A8982;
+box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.25);  
+}
+#PlayerClearsInside {
+    /* LightBg */
+
+overflow-y: scroll;
+position: absolute;
+width: 1476px;
+height: 1329px;
+left: 222px;
+top: 1703px;
+
+background: #C6C5BE;
+}
+#PlayerNamesTab {
+    /* Tab */
+
+
+position: absolute;
+width: 395px;
+height: 89px;
+left: 254px;
+top: 1561px;
+
+background: #FECE00;
+box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+
+font-weight: 400;
+font-size: 64px;
+line-height: 85px;
+
+color: #5D1B1C;
+text-align: center;
+}
+#PlayerProgressTab {
+    /* Tab */
+
+
+position: absolute;
+width: 395px;
+height: 89px;
+left: 762px;
+top: 1561px;
+
+background: #FECE00;
+box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+
+font-weight: 400;
+font-size: 64px;
+line-height: 85px;
+
+color: #5D1B1C;
+text-align: center;
+}
+#PlayerVideoTab {
+    /* Tab */
+
+
+position: absolute;
+width: 395px;
+height: 89px;
+left: 1270px;
+top: 1561px;
+
+background: #FECE00;
+box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+
+font-weight: 400;
+font-size: 64px;
+line-height: 85px;
+
+color: #5D1B1C;
+text-align: center;
+}
+
+#ProgressOrCompletionInfo {
+    position: relative;
+    text-align: left;
+    background:none;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 85px;
+
+color: #5D1B1C;
+}
+
+#ProgressInfo {
+    position: relative;
+    text-align: center;
+    background: none;
+    font-weight: 400;
+    margin-top: -86px;
+    font-size: 44px;
+    line-height: 85px;
+    color: #5D1B1C;
+}

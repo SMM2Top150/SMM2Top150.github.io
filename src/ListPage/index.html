@@ -1,0 +1,97 @@
+<html lang="en"><head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../src/format.css">
+    <script src="../levelDatabase.js"></script>
+    <script type="text/javascript" src="../SheetsData.js"></script>
+    <title>List Page</title>
+</head>
+<body>
+  <div id="NavBar" style="position: sticky; z-index: 999; opacity: .95; position: fixed;">
+    <!-- Home Page Tab -->
+    <div id="navTabHome" onclick="window.location.href='../../src/HomePage/index.html'">
+  Homepage
+    </div>
+    <!-- List Page Tab -->
+    <div id="navTabOnList" onclick="window.location.href='../../src/ListPage/index.html'">
+  Listpage
+    </div>
+    <!-- Leaderboard Page Tab -->
+  <div id="navTabLeaderboard" onclick="window.location.href='../../src/LeaderboardPage/index.html'">
+  Leaderboard
+    </div>
+    <div id="navTabProfile">
+    </div>      
+  </div>
+  <div style="margin-top:180px"></div>
+<div id="demo"></div>                                      
+    <p style="margin-top:400px; text-align: center;font-size: 7px;">All credits of this project go to pete_#0056, ariunknown#3071, Tris#0595, Alkali#4442, Ark#4834, Little Crap#7450, Trickbot#1447, and my babe Papyrus12#6686. The github page can be found <a href="https://github.com/JacobJershin/The-Top-150">here</a></p>
+    
+    <script> 
+    console.log("test")
+    console.log(EveryLevelArrayString[0])                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+      function PointCalc(PlaceMent) {
+          return Math.pow(1.054411903089, ((PlaceMent+40)/1.4))
+      }
+
+      function ClearPoints(Array) {
+          index = 0
+          total = 0
+          while (index < Array.length) {
+              total += PointCalc(101 - Array[index] + Daphnes_Finale - 1)
+              index += 1
+          }
+          return total
+      }
+
+      function ProgressCalc(Placement, Progress) {
+          PointPrecent = ((Progress/10.0)*(Progress/10.0) * 0.01)
+          return (PointCalc(Placement + Daphnes_Finale - 1)*PointPrecent)*0.90
+      }
+
+      function ProgressPoint(ProgressArray, LevelArray) {
+          index = 0
+          total = 0
+          while (index < ProgressArray.length) {
+              total += ProgressCalc(101 - LevelArray[index], ProgressArray[index])
+              index += 1
+          }
+          return total
+      }
+
+      function MasterPoints(ProgressArray, ProgressLevelArray, ClearArray) {
+          return ProgressPoint(ProgressArray, ProgressLevelArray) +  ClearPoints(ClearArray)
+       }
+
+       levelSlot=""
+       index = 1
+       while (index < 151) { 
+          findJSON = EveryLevelArrayString[index-1] + "JSON"     //THIS IS NOT THE API FIX THIS 
+          console.log(findJSON)
+          console.log(object[findJSON])
+          obj = object[findJSON]
+          console.log(videosArray[index-1].split('='))
+          YTID = videosArray[index-1].split('=')
+
+          if (YTID[1] != undefined) {
+              newID = "https://img.youtube.com/vi/"+(YTID[1]).slice(0, -1)+"/maxresdefault.jpg"
+
+          } else {
+              newID = "https://tgrcode.com/mm2/level_thumbnail/"+obj.course_id
+          }
+          console.log(newID + "are yu fucked")
+
+          levelSlot += "<div id='levelSlots' style='margin-top:60px'><img id='thumbnail' src='"+newID+"'></img><div style='cursor: context-menu;' onclick='LevelPage()' id='titleText'>#"+index+" "+obj.name+"</div><img id='flag' src='${flag.img}'><div id='discription'>"+obj.description+"</div><div id='levelInfo' style='text-align: center'><p style='background:none'>Created By: "+obj.uploader.name+"</p><p style='background:none'>Uploaded By: "+obj.uploader.name+"</p></div><img id='creatorPFP' src='"+obj.uploader.mii_image+"'><div id='creditsTab'>Credits Tab</div><div id='courseDescription'>Course Description</div><div id='dataTable'><p style='background:none; padding-top:10px;'>Completion: "+PointCalc(101-index).toFixed(2)+"</p><p style='background:none'>List Progress: "+ProgressCalc(101-index, 55).toFixed(2)+"</p><p style='background:none'>Clear Rate: "+ obj.clears+"/"+obj.attempts.toLocaleString()+"</p></div><div id='dataTab'>Data Tab</div><div id='IDandDate'><p style='background:none'>Course ID: "+obj.course_id+"</p><p style='background:none'>Uploaded: "+obj.uploaded_pretty+"</p></div></div>"
+          index++
+
+      }
+      document.getElementById("demo").innerHTML = levelSlot
+
+      function LevelPage() {
+          window.open("../../src/ListPage/LevelPage/index.html")
+      }
+    </script>
+  
+</body></html>
