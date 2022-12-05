@@ -13,7 +13,7 @@
     height: 117px;
     left: 0px;
     top: 0px;
-
+    font-size: 4.9vw;
     background: #D0A71B;
     box-shadow: 0px 27px 30px rgba(0, 0, 0, 0.25);
 }
@@ -22,7 +22,6 @@
     text-align: center;
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
     line-height: 85px;
     color: #5D1B1C;
     position: absolute;
@@ -38,7 +37,6 @@
     text-align: center;
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
     line-height: 85px;
     color: #FECE00;
     position: absolute;
@@ -54,7 +52,6 @@
     text-align: center;
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
     line-height: 85px;
     color: #FECE00;
     position: absolute;
@@ -70,7 +67,6 @@
     text-align: center;
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
     line-height: 85px;
     color: #5D1B1C;
     position: absolute;
@@ -85,7 +81,6 @@
 #navTabLeaderboard {
     text-align: center;
     font-weight: 400;
-    font-size: 56px;
     line-height: 85px;
     color: #5D1B1C;
     position: absolute;
@@ -100,7 +95,6 @@
 #navTabOnLeaderboard {
     text-align: center;
     font-weight: 400;
-    font-size: 56px;
     line-height: 85px;
     color: #FECE00;
     position: absolute;
