@@ -124,7 +124,7 @@
 #thumbnail {
     position: relative;
     width: 27%;
-    height: 36%;
+    height: 31%;
     top: 3%;
     left: 1%;
     border-radius: 20px;
@@ -132,140 +132,132 @@
 
 #titleText {
     position: relative;
-    top: -42%;
+    top: -35%;
     left: 30%;
     font-weight: 100;
-    font-size: 165%;
+    font-size: 2vw;
     line-height: 128px;
     letter-spacing: 0.05em;
     color: #5D1B1C;
     background: none;
-    white-space: nowarp;
+    white-space: nowrap;
+    width: 0%;
 }
 
 #flag {
     background: black;
-    width: 120px;
-    height: 70px;
-    border-radius: 10px;
+    width: 11%;
+    height: 11%;
+    border-radius: 8px;
     position: relative;
-    top: -72%;
-    left: 93%;
+    top: -49%;
+    left: 87%;
 }
 
-#discription{
-    width: 1100px;
-    height: 161px;
-    left: 33%;
-    top: -58%;
+#discription {
+    width: 65%;
+    height: 25%;
+    left: 31%;
+    top: -46%;
     background: #FEF3D3;
     border-radius: 20px;
     position: relative;
-
     text-align: left;
-
-
     font-weight: 300;
-    font-size: 30px;
+    font-size: 2vw;
     line-height: 43px;
-
     color: #5D1B1C;
 }
 
-#levelInfo{
+#levelInfo {
     position: relative;
-    width: 459px;
-    height: 209px;
-    left: 2%;
-    top: -57%;
+    width: 29%;
+    height: 34%;
+    left: 1%;
+    top: -44%;
     background: #FEF3D3;
     border-radius: 20px;
-    font-weight: 1px;
-    font-size: 32px;
-    line-height: 43px;
+    font-size: 2vw;
     color: #5D1B1C;
+    white-space: nowrap;
 }
 
-#creatorPFP{
+#creatorPFP {
     position: relative;
-    width: 72px;
-    height: 72px;
+    max-width: 6%;
+    max-height: 12%;
     left: 22.5%;
-    top: -71%;
+    top: -57%;
     background: #C4C4C4;
     border-radius: 50%;
-
     background-size: cover;
 }
 
-#creditsTab{
+#creditsTab {
     position: relative;
-    width: 100px;
+    width: 0px;
     height: 72px;
-    left: 12%;
-    top: -75%;
+    left: 10%;
+    top: -63%;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 2vw;
     line-height: 27px;
     text-align: center;
     color: #7E7D75;
     background: none;
     text-align: center;
+    white-space: nowrap;
 }
 
-#courseDescription{
+#courseDescription {
     position: relative;
-    width: 179px;
-    height: 72px;
-    left: 60%;
-    top: -129%;
+    width: 0px;
+    left: 55%;
+    top: -112%;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 2vw;
     line-height: 27px;
-    text-align: center;
     color: #7E7D75;
     background: none;
     text-align: center;
+    white-space: nowrap;
 }
 
-#dataTable{
+#dataTable {
     position: relative;
-    width: 456px;
-    height: 209px;
+    width: 30%;
+    height: 35%;
     left: 36%;
-    top: -135.2%;
+    top: -110%;
     background: #FEF3D3;
     border-radius: 20px;
-
-    font-size: 32px;
-    line-height: 21px;
+    font-size: 2vw;
+    line-height: 17px;
     color: #5D1B1C;
-
-    text-align:center;
+    text-align: center;
 }
 
-#dataTab{
+#dataTab {
     position: relative;
-    width: 179px;
-    height: 72px;
-    left: 44%;
-    top: -140.8%;
+    width: 0px;
+    left: 47%;
+    top: -118.8%;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center;
     color: #7E7D75;
     background: none;
     text-align: center;
+    white-space: nowrap;
+    font-size: 2vw;
 }
 
-#IDandDate{
+#IDandDate {
     position: relative;
-    background:none;
-    height: 72px;
+    background: none;
     left: 69%;
-    top: -187.8%;
-    font-size: 30px;
-    line-height: 77px;
+    top: -147.8%;
+    font-size: 2vw;
+    line-height: 16px;
     color: #5D1B1C;
+    width: 0%;
+    white-space: nowrap;
 }
