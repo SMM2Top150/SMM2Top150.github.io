@@ -112,45 +112,37 @@
     border-radius: 20px 20px 0px 0px;
 }
 
-#levelSlots{
-    /* levelSlots */
-    
-    width: 1786px;
+#levelSlots {
+    width: 97%;
     height: 589px;
-    margin-top: 4%;
-    margin-left: 67px;
-		 
+    margin-left: 2%;
     background: #FFFFFF;
-    box-shadow: -23px 23px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    box-shadow: -15px 15px 0px rgb(0 0 0 / 25%);
+    border-radius: 22px;
 }
 
-#thumbnail{
-    /* thumbnail */
-    
+#thumbnail {
     position: relative;
-    width: 493px;
-    height: 300px;
-
-    top:3%;
-    left:1%;
+    width: 27%;
+    height: 36%;
+    top: 3%;
+    left: 1%;
     border-radius: 20px;
 }
 
 #titleText {
     position: relative;
-    top: -46%;
+    top: -42%;
     left: 30%;
-	  
-    font-weight:100;
-    font-size: 40px;
+    font-weight: 100;
+    font-size: 165%;
     line-height: 128px;
-
     letter-spacing: 0.05em;
-
     color: #5D1B1C;
     background: none;
+    white-space: nowarp;
 }
+
 #flag {
     background: black;
     width: 120px;
