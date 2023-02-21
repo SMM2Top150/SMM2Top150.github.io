@@ -1,4 +1,36 @@
 <html lang="en">
+
+<script>
+    const url = 'https://script.google.com/macros/s/AKfycbxzmGDJZuBf8p536PG-Zp5HdhihYQB77kBCdGIok9NhKwcsLKwb-xSZ18frTuQzujZt/exec?action=getData'
+
+async function GET(url) {
+const response = await fetch(url);
+var JSON = await response.json();
+console.log(JSON);
+HTMLshower(JSON);
+}
+
+GET(url);
+
+function HTMLshower(JSON) {
+var disp = ''
+
+for (i=0; i < JSON.length; i++) {
+disp += (
+    '<pre> ' + (i+1) + '. ' + JSON[i].Title + 
+    '<div style ="padding-left: 70px">Description: ' + JSON[i].Description + '<br>' +
+    'CourseID: ' + JSON[i].CourseID + '<br>' +
+    'Creators: ' + JSON[i].Creators + '<br>' +
+    'ProgressP: ' + JSON[i].ProgressP + '<br>' +
+    'ClearVideo: ' + JSON[i].ClearVideo + '<br> </div>' + 
+    '</pre>')
+}
+
+// Setting innerHTML as tab variable
+document.getElementById("done").innerHTML = disp;
+}
+</script>  
+
     <head>
     
         <meta charset="UTF-8">
@@ -8,29 +40,7 @@
 
     </head>
     <body>
-        <script>
-            const url = 'https://script.google.com/macros/s/AKfycbxzmGDJZuBf8p536PG-Zp5HdhihYQB77kBCdGIok9NhKwcsLKwb-xSZ18frTuQzujZt/exec?action=getData'
-
-async function GET(url) {
-    const response = await fetch(url);
-    var JSON = await response.json();
-    console.log(JSON);
-    HTMLshower(JSON);
-}
-
-GET(url);
-
-function HTMLshower(JSON) {
-    var disp = ''
-    
-    for (i=0; i < JSON.length; i++) {
-        disp += ('<pre> ' + (i+1) + '. ' + JSON[i].Title + ' </pre>')
-    }
-
-    // Setting innerHTML as tab variable
-    document.getElementById("done").innerHTML = disp;
-}
-        </script>    
+  
         <div id = "done"> Loading... </div>
 
     </body>
