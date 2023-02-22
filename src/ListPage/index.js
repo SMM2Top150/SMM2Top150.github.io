@@ -1,4 +1,4 @@
-function myFunction(x) {
+function hamburgur(x) {
     x.classList.toggle("change");
   }
 
