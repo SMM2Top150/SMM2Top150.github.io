@@ -2,7 +2,7 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(2, 1fr) 2fr;
+  grid-template-rows: repeat(2, 1fr) auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -62,6 +62,7 @@
 
   margin-top: 20px;
 }
+
 .div6 {
   grid-area: 3 / 3 / 4 / 6;
 
@@ -126,10 +127,49 @@
   font-size: 1.9vw;
 }
 
+/*--- CRUNCH VIEW ---*/
+@media only screen and (min-width: 1100px) {
+  .div5-thumbnail {
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+  }
+  .div7 {
+    grid-area: 3 / 6 / 4 / 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 21px;
+    font-size: 1.2vw;
+  }
+  .screensplit-div-list {
+    width: 66%;
+  }
+  .div3-title {
+    cursor: pointer;
+    color: #5d1b1c;
+    font-weight: 100;
+    font-size: 1.4vw;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-align: center;
+  }
+  .description-text {
+    margin-left: 12px;
+    margin-right: 12px;
+    color: #5d1b1c;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+
+    font-weight: 400;
+    font-size: 1.3vw;
+  }
+}
+
 /*--- BODY ---*/
 
 body {
-  background-color: #e5e5e5;
+  /*background-color: #e5e5e5;*/
   /* font-family: "Amiko"; */
   font-family: Tahoma, sans-serif;
 }
@@ -144,9 +184,7 @@ body {
 
   position: fixed;
   z-index: 999;
-  width: 100%;
-  top: 0;
-  left: 0;
+  width: 98%;
 }
 
 /* Style the links inside the navigation bar */
