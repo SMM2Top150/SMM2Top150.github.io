@@ -191,14 +191,14 @@ body {
 
 /* Style the links inside the navigation bar */
 .nav a {
-  float: left;
-  color: #5d1b1c;
-  background-color: #fece00;
-  text-align: center;
-  padding: 14px 23px;
-  text-decoration: none;
-  transition: 0.25s;
-  font-size: 20px;
+    float: left;
+    color: #5d1b1c;
+    background-color: #fece00;
+    text-align: center;
+    padding: 14px 2vw;
+    text-decoration: none;
+    transition: 0.25s;
+    font-size: 2vw;
 }
 
 /* Change the color of links on hover */
