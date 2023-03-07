@@ -1,177 +1,220 @@
-<html lang="en"><head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../HomePage/format.css">
-    <link rel="stylesheet" href="../../../src/format.css">
-    <link rel="stylesheet" href="../LevelPage/format.css">
-    
-    <script src="../../levelDatabase.js"></script> <!--THIS LINE NEEDS TO BE REL TO THE API NOT DATABASE-->
-    <script type="text/javascript" src="../../SheetsData.js"></script>
-    
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>List Page</title>
-</head>
-<body onload="runIt()">
-  <div id="NavBar" style="position: sticky; z-index: 999; opacity: .95; position: fixed;">
-    <!-- Home Page Tab -->
-    <div id="navTabHome" onclick="window.location.href='../../HomePage/index.html'">
-  Homepage
+  </head>
+  <body>
+    <div class="nav" style="justify-content: space-between;">
+      <div>
+        <a href="#../HomePage/index.html">Home</a>
+        <a class="active" href="#">List Page</a>
+        <a href="#contact">Leaderboard</a>
+        <a href="#about">My Profile</a>
+      </div>
+      <div class="burger-bars" onclick="hamburgur(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </div>
-    <!-- List Page Tab -->
-    <div id="navTabOnList" onclick="window.location.href='../../src/ListPage/index.html'">
-  Listpage
-    </div>
-    <!-- Leaderboard Page Tab -->
-    <div id="navTabLeaderboard" onclick="window.location.href='../../LeaderboardPage/index.html'">
-  Leaderboard
-    </div>
-    <!-- profile -->
-    <div id="navTabProfile">
-    </div>
-  </div>
- 
 
- <style>
-   #PrevPage{
-    font-size: 82px;
-    margin-left: 14px;
-    margin-top: 79px;
-    text-decoration: solid;
-    background: none;
-    color: #5D1B1C;
-    border: none;
-   }
-   
-   #NextPage{
-    font-size: 82px;
-    margin-left: 1610px;
-    margin-top: 79px;
-    text-decoration: solid;
-    background: none;
-    color: #5D1B1C;
-    border: none;
-   }
- </style>
- 
- <div id="WhiteDivBG">
-  <button id="PrevPage" onclick="prevPage()">&#60;</button>
-  <button id="NextPage" onclick="NextPage()">&#62;</button>
-</div>
- <div id="test">Loading...</div>
-  <div id="test2">Loading...</div>
-  <div id="test3">Loading...</div>
-  <div id="test4">Loading...</div>
-  <div id="test5">Loading...</div>
-  <div id="test6">Loading...</div>
-  <div id="test7">Loading...</div>
+    <div style="padding-top: 50px;"></div>
+    <div class="main-section">
+      <div class="parent">
+        <div class="div1">#n Title Here</div>
+        <div class="div2">
+          <p style="margin-right: 12px; margin-left: 12px;">
+            This is the course description or something, it might be kinda long
+            im not sure
+          </p>
+        </div>
+        <iframe class="div3" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+        <div class="div4">
+          <div class="div4-stats">
+            completion: 120.32 <br />
+            list progress: 66.31%<br />
+            clear rate: 6/92,231
+          </div>
+        </div>
+        <div class="div5">
+          <div class="div5-stats">
+            Created By: Someone<br />
+            Uploaded By: Person
+          </div>
+        </div>
+        <div class="div6">
+          Game Style: NSMBU <br />
+          Course Theme: Castle <br />
+          Course Tags: Speedrun & Single player
+        </div>
+        <div class="div7">
+          Course ID: 6CKKQT69G <br />
+          Upload Date: 29-5-2022 14:25:33 <br />
+          Course Length: 03:29.069
+        </div>
+        <div class="div8">
+          <div class="ClearsTopBar">
+            <div class="ClearsTopBarTabs">Player</div>
+            <div class="ClearsTopBarTabs">Progress</div>
+            <div class="ClearsTopBarTabs">Video</div>
+          </div>
 
-  <div id="PlayerClearsInside"></div>
-
-    <div id="PlayerClearsDiv"></div>
-      <div id="PlayerNamesTab">Player</div>
-      <div id="PlayerProgressTab">Progress</div>
-      <div id="PlayerVideoTab">Video</div>
+          <div class="parent-ClearsOrPP">
+            <div class="div1-ClearsOrPP">name</div>
+            <div class="div2-ClearsOrPP">progress</div>
+            <div class="div3-ClearsOrPP">video</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script>
-        function PointCalc(PlaceMent) {
-          return Math.pow(1.054411903089, ((PlaceMent+40)/1.4))
-        }   
-  
-        function ClearPoints(Array) {
-          var index = 0
-          var total = 0
-            while (index < Array.length) {
-              total += PointCalc(101 - Array[index] + Daphnes_Finale - 1)
-              index += 1
-            }
-          return total
-        }
-  
-        console.log(ClearPoints([1]))
-        console.log("fart")
-        
-        function ProgressCalc(Placement, Progress) {
-            PointPrecent = ((Progress/10.0)*(Progress/10.0) * 0.01)
-            return (PointCalc(Placement + Daphnes_Finale - 1)*PointPrecent)*0.90
-        }
-  
-        function ProgressPoint(ProgressArray, LevelArray) {
-            index = 0
-            total = 0
-            while (index < ProgressArray.length) {
-                total += ProgressCalc(101 - LevelArray[index], ProgressArray[index])
-                index += 1
-            }
-            return total
-        }
-  
-        function MasterPoints(ProgressArray, ProgressLevelArray, ClearArray) {
-            return ProgressPoint(ProgressArray, ProgressLevelArray) +  ClearPoints(ClearArray)
-         }
-         index = 1
-function runIt() {
-
-         console.log(PlayerNameArray)
-         //index = 67
-            findJSON= EveryLevelArrayString[index-1] + "JSON"
-            //console.log(findJSON)
-            console.log(object[findJSON])
-            obj = object[findJSON]
-            console.log(videosArray[index-1].split('='))
-            YTID = videosArray[index-1].split('=')
-            levelSlot = "<div id='LevelTitle'>#"+index+" "+obj.name+"</div>"
-            levelSlot2 = "<div id='descriptionBox'>"+obj.description+"</div>"
-            levelSlot3 = "<div id='DataTab'><p style='background:none'>Completion: "+ClearPoints([index]).toFixed(2)+"</p><p style='background:none'>List Progress: "+ProgressCalc(101-index, 55).toFixed(2)+"</p><p style='background:none'>Clear Rate: "+obj.clears+"/"+obj.attempts.toLocaleString()+"</p></div>"
-            levelSlot4 = "<div id='levelInfoTab' style='text-align: center'><p style='background:none'>Created By: "+obj.uploader.name+"</p><p style='background:none'>Uploaded By: "+obj.uploader.name+"</p></div><img id='creatorPFPTab' src='"+obj.uploader.mii_image+"'>"
-            levelSlot5 = "<div id='statsTab'><p style='background:none'>Game Style: "+obj.game_style_name+"</p><p style='background:none'>Course Theme: "+obj.theme_name+"</p><p style='background:none'>Course Tags: "+obj.tags_name+"</div>"
-            levelSlot6 = "<div id='CourseInfoTab'><p style='background:none'>Course ID: "+obj.course_id+"</p><p style='background:none'>Upload Date: "+obj.uploaded_pretty+"</p><p style='background:none'>Course Length: "+obj.upload_time_pretty+"</div>"
-            levelSlot7 = "<iframe id='embed' src='https://www.youtube.com/embed/"+ YTID[1] +"'></iframe>"
-              
-        document.getElementById("test").innerHTML = levelSlot
-        document.getElementById("test2").innerHTML = levelSlot2        
-        document.getElementById("test3").innerHTML = levelSlot3
-        document.getElementById("test4").innerHTML = levelSlot4
-        document.getElementById("test5").innerHTML = levelSlot5
-        document.getElementById("test6").innerHTML = levelSlot6
-        document.getElementById("test7").innerHTML = levelSlot7
-              
-    snart = ""
-    increment = 0
-    PlayerID = 0
-    while (PlayerID < PlayerNameArray.length) { //goes through every player
-      console.log(PlayerID)
-      while (increment < MasterClears[PlayerID].length) { //goes through that players clears
-        if (MasterClears[PlayerID][increment] == index) { //if they cleared the level 
-          console.log("sucsess")
-        snart += "<div id='ProgressOrCompletionInfo' style='margin-left:32px'><a style='background:none;'>"+PlayerNameArray[PlayerID]+"</a></div><div id='ProgressInfo'><a style='background:none'>100%</a></div>"
-          console.log(snart + "snart")
+      function hamburgur(x) {
+        x.classList.toggle("change");
       }
-      increment++
+
+      function PointCalc(PlaceMent) {
+        return Math.pow(1.054411903089, (PlaceMent + 40) / 1.4);
       }
-      increment = 0
-      PlayerID++
-  }
 
-  document.getElementById("PlayerClearsInside").innerHTML = snart
-}
-function prevPage() {
-  if (index > 1) {
-    index -= 1
-    console.log(index)
-    runIt()
-  }
-}
+      function ClearPoints(Array) {
+        var index = 0;
+        var total = 0;
+        while (index < Array.length) {
+          total += PointCalc(101 - Array[index] + Daphnes_Finale - 1);
+          index += 1;
+        }
+        return total;
+      }
 
-function NextPage() {
-  if (index < 150) {
-    index += 1
-    console.log(index)
-    runIt()
-  }
-}
+      console.log(ClearPoints([1]));
+      console.log("fart");
+
+      function ProgressCalc(Placement, Progress) {
+        PointPrecent = (Progress / 10.0) * (Progress / 10.0) * 0.01;
+        return PointCalc(Placement + Daphnes_Finale - 1) * PointPrecent * 0.9;
+      }
+
+      function ProgressPoint(ProgressArray, LevelArray) {
+        index = 0;
+        total = 0;
+        while (index < ProgressArray.length) {
+          total += ProgressCalc(101 - LevelArray[index], ProgressArray[index]);
+          index += 1;
+        }
+        return total;
+      }
+
+      function MasterPoints(ProgressArray, ProgressLevelArray, ClearArray) {
+        return (
+          ProgressPoint(ProgressArray, ProgressLevelArray) +
+          ClearPoints(ClearArray)
+        );
+      }
+      index = 1;
+      function runIt() {
+        console.log(PlayerNameArray);
+        //index = 67
+        findJSON = EveryLevelArrayString[index - 1] + "JSON";
+        //console.log(findJSON)
+        console.log(object[findJSON]);
+        obj = object[findJSON];
+        console.log(videosArray[index - 1].split("="));
+        YTID = videosArray[index - 1].split("=");
+        levelSlot =
+          "<div id='LevelTitle'>#" + index + " " + obj.name + "</div>";
+        levelSlot2 = "<div id='descriptionBox'>" + obj.description + "</div>";
+        levelSlot3 =
+          "<div id='DataTab'><p style='background:none'>Completion: " +
+          ClearPoints([index]).toFixed(2) +
+          "</p><p style='background:none'>List Progress: " +
+          ProgressCalc(101 - index, 55).toFixed(2) +
+          "</p><p style='background:none'>Clear Rate: " +
+          obj.clears +
+          "/" +
+          obj.attempts.toLocaleString() +
+          "</p></div>";
+        levelSlot4 =
+          "<div id='levelInfoTab' style='text-align: center'><p style='background:none'>Created By: " +
+          obj.uploader.name +
+          "</p><p style='background:none'>Uploaded By: " +
+          obj.uploader.name +
+          "</p></div><img id='creatorPFPTab' src='" +
+          obj.uploader.mii_image +
+          "'>";
+        levelSlot5 =
+          "<div id='statsTab'><p style='background:none'>Game Style: " +
+          obj.game_style_name +
+          "</p><p style='background:none'>Course Theme: " +
+          obj.theme_name +
+          "</p><p style='background:none'>Course Tags: " +
+          obj.tags_name +
+          "</div>";
+        levelSlot6 =
+          "<div id='CourseInfoTab'><p style='background:none'>Course ID: " +
+          obj.course_id +
+          "</p><p style='background:none'>Upload Date: " +
+          obj.uploaded_pretty +
+          "</p><p style='background:none'>Course Length: " +
+          obj.upload_time_pretty +
+          "</div>";
+        levelSlot7 =
+          "<iframe id='embed' src='https://www.youtube.com/embed/" +
+          YTID[1] +
+          "'></iframe>";
+
+        document.getElementById("test").innerHTML = levelSlot;
+        document.getElementById("test2").innerHTML = levelSlot2;
+        document.getElementById("test3").innerHTML = levelSlot3;
+        document.getElementById("test4").innerHTML = levelSlot4;
+        document.getElementById("test5").innerHTML = levelSlot5;
+        document.getElementById("test6").innerHTML = levelSlot6;
+        document.getElementById("test7").innerHTML = levelSlot7;
+
+        snart = "";
+        increment = 0;
+        PlayerID = 0;
+        while (PlayerID < PlayerNameArray.length) {
+          //goes through every player
+          console.log(PlayerID);
+          while (increment < MasterClears[PlayerID].length) {
+            //goes through that players clears
+            if (MasterClears[PlayerID][increment] == index) {
+              //if they cleared the level
+              console.log("sucsess");
+              snart +=
+                "<div id='ProgressOrCompletionInfo' style='margin-left:32px'><a style='background:none;'>" +
+                PlayerNameArray[PlayerID] +
+                "</a></div><div id='ProgressInfo'><a style='background:none'>100%</a></div>";
+              console.log(snart + "snart");
+            }
+            increment++;
+          }
+          increment = 0;
+          PlayerID++;
+        }
+
+        document.getElementById("PlayerClearsInside").innerHTML = snart;
+      }
+      function prevPage() {
+        if (index > 1) {
+          index -= 1;
+          console.log(index);
+          runIt();
+        }
+      }
+
+      function NextPage() {
+        if (index < 150) {
+          index += 1;
+          console.log(index);
+          runIt();
+        }
+      }
     </script>
-
-
-</body>
+  </body>
 </html>
